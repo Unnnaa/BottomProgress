@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".DashboardFragment"
+                                                   android:id="@+id/container" android:background="#2196F3">
+    <TextView
+            android:text="Java"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewJava"
+            android:textSize="18sp"
+            android:textColor="#EEEAEA"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginBottom="44dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNetwork"/>
+    <TextView
+            android:text="Network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewNetwork"
+            android:textSize="18sp"
+            android:textColor="#EEEAEA"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp" android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDatabase"/>
+    <TextView
+            android:text="Database"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewDatabase"
+            android:textSize="18sp"
+            android:textColor="#EEEAEA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@+id/editTextDB" android:layout_marginStart="16dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextJava"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="48dp" android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNet"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextJava" android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextDB"
+            android:layout_marginTop="52dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNet" android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="Total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTotal"
+            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDB" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
